@@ -123,8 +123,8 @@ def berakna_resdagar_med_datum():
 def main():
     print("=== SL-biljettkalkylator ===")
     print("Välj biljettyp:")
-    print("  1) vuxen")
-    print("  2) discount (t.ex. ungdom/student)")
+    print("\t1) vuxen")
+    print("\t2) discount (pensionär/ungdom/student)")
 
     typ_val = input("Ange 1 eller 2: ").strip()
     if typ_val == "1":
@@ -136,8 +136,8 @@ def main():
         return
 
     print("\nHur vill du ange perioden?")
-    print("  1) Ange direkt hur många dagar du behöver resa")
-    print("  2) Ange start- och slutdatum (med val om helger ska räknas)")
+    print("\t1) Ange direkt hur många dagar du behöver resa")
+    print("\t2) Ange start- och slutdatum (med val om helger ska räknas)")
 
     valg = input("Ange 1 eller 2: ").strip()
 
@@ -198,8 +198,7 @@ def main():
     for key, antal_st in sorted(antal_per_typ.items(), key=lambda x: x[0]):
         print(f"- {antal_st} st {biljett_namn[key]}")
 
-    # Visa hur många dagar biljetterna täcker
-    # (OBS: vi behöver 'biljetter'-definitionen igen här)
+    # visa hur många dagar biljetterna täcker
     priser_tmp = get_prices(typ)
     biljetter_info = {
         "enkel": (1, priser_tmp["enkel"] * 2),
@@ -210,9 +209,8 @@ def main():
         "90d":   (90, priser_tmp["nio_m"]),
         "365d":  (365, priser_tmp["ars"]),
     }
-
     total_dagar = sum(biljetter_info[b][0] for b in biljetter)
-    print(f"\nBiljetterna täcker totalt {total_dagar} dagar (du behöver {antal}).")
+    print(f"\nBiljetterna täcker totalt {total_dagar} dagar (du behöver {antal}).\n")
 
 
 if __name__ == "__main__":
