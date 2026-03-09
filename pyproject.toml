@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biljett"
+version = "0.1.0"
+description = "A Swedish public transport decision assistant with CLI and TUI workflows."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "Kyle B" }
+]
+dependencies = [
+  "httpx>=0.28.1,<0.29",
+  "pydantic>=2.11,<3",
+  "rich>=14.0.0,<15",
+  "textual>=6.0.0,<7",
+  "typer>=0.16.1,<0.17"
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.18.2,<2",
+  "pytest>=8.4.2,<9",
+  "pytest-cov>=6.3.0,<7",
+  "ruff>=0.13.1,<0.14"
+]
+
+[project.scripts]
+biljett = "biljett.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_configs = true
+packages = ["biljett"]

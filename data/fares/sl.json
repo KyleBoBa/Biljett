@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "region": "sl",
+    "version": "2026-03-local-v1",
+    "valid_from": "2026-03-09",
+    "source": "Local maintained catalog based on current project baseline. Replace with official sync when a stable fare source is available."
+  },
+  "profiles": {
+    "adult": [
+      {
+        "code": "single",
+        "name": "Enkelbiljett",
+        "type": "single",
+        "duration_days": 1,
+        "price_sek": 43,
+        "description": "One single ticket. The optimizer multiplies this by rides per day."
+      },
+      {
+        "code": "24h",
+        "name": "24-timmarsbiljett",
+        "type": "pass",
+        "duration_days": 1,
+        "price_sek": 180,
+        "description": "Unlimited travel for one day."
+      },
+      {
+        "code": "72h",
+        "name": "72-timmarsbiljett",
+        "type": "pass",
+        "duration_days": 3,
+        "price_sek": 360,
+        "description": "Unlimited travel for three days."
+      },
+      {
+        "code": "7d",
+        "name": "7-dagarsbiljett",
+        "type": "pass",
+        "duration_days": 7,
+        "price_sek": 470,
+        "description": "Unlimited travel for seven days."
+      },
+      {
+        "code": "30d",
+        "name": "30-dagarsbiljett",
+        "type": "pass",
+        "duration_days": 30,
+        "price_sek": 1060,
+        "description": "Unlimited travel for thirty days."
+      },
+      {
+        "code": "90d",
+        "name": "90-dagarsbiljett",
+        "type": "pass",
+        "duration_days": 90,
+        "price_sek": 3070,
+        "description": "Unlimited travel for ninety days."
+      },
+      {
+        "code": "365d",
+        "name": "Årsbiljett",
+        "type": "pass",
+        "duration_days": 365,
+        "price_sek": 11130,
+        "description": "Unlimited travel for a year."
+      }
+    ],
+    "student": [
+      {
+        "code": "single",
+        "name": "Enkelbiljett",
+        "type": "single",
+        "duration_days": 1,
+        "price_sek": 26,
+        "description": "One discounted single ticket. The optimizer multiplies this by rides per day."
+      },
+      {
+        "code": "24h",
+        "name": "24-timmarsbiljett",
+        "type": "pass",
+        "duration_days": 1,
+        "price_sek": 110,
+        "description": "Unlimited travel for one day."
+      },
+      {
+        "code": "72h",
+        "name": "72-timmarsbiljett",
+        "type": "pass",
+        "duration_days": 3,
+        "price_sek": 220,
+        "description": "Unlimited travel for three days."
+      },
+      {
+        "code": "7d",
+        "name": "7-dagarsbiljett",
+        "type": "pass",
+        "duration_days": 7,
+        "price_sek": 290,
+        "description": "Unlimited travel for seven days."
+      },
+      {
+        "code": "30d",
+        "name": "30-dagarsbiljett",
+        "type": "pass",
+        "duration_days": 30,
+        "price_sek": 650,
+        "description": "Unlimited travel for thirty days."
+      },
+      {
+        "code": "90d",
+        "name": "90-dagarsbiljett",
+        "type": "pass",
+        "duration_days": 90,
+        "price_sek": 1880,
+        "description": "Unlimited travel for ninety days."
+      },
+      {
+        "code": "365d",
+        "name": "Årsbiljett",
+        "type": "pass",
+        "duration_days": 365,
+        "price_sek": 6830,
+        "description": "Unlimited travel for a year."
+      }
+    ]
+  }
+}
