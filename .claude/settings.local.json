@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "magic"
+  ],
+  "enableAllProjectMcpServers": true
+}

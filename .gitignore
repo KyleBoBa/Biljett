@@ -1,0 +1,12 @@
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+__pycache__/
+*.pyc
+.biljett-cache.sqlite3
